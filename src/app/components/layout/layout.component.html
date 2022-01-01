@@ -1,0 +1,63 @@
+<p>{{this.daysInMonth}} ימי עבודה החודש</p>
+<p>{{this.workDaysTillNow}} ימי עבודה עד כה</p>
+<p>{{this.fullWorkTillNow}} משרה מלאה עד כה</p>
+<table>
+    <tr>
+        <th>
+            F
+        </th>
+        <th>
+            מתקתקת
+        </th>
+        <th>    
+            מנ"צ
+        </th>
+        <th>
+            % משרה
+        </th>
+        <th>
+            זכות שעות  - עד כה
+        </th>
+        <th>
+            שעות שנוצלו  - עד כה
+        </th>
+        <th>
+            אחוז ניצול יחסי עד היום
+        </th>
+        <th>
+            הערות
+        </th>
+        <th>
+            סה"כ שעות בחריגה
+        </th>
+    </tr>
+    <tr *ngFor="let customer of customersData">
+        <td>
+            {{customer.name}}
+        </td>
+        <td>
+            {{customer.ticking}}
+        </td>
+        <td>
+            {{customer.teamLeader}}
+        </td>
+        <td>
+            {{customer.job}}%
+        </td>
+        <td>
+            {{customer.hoursRightTillNow}}
+        </td>
+        <td>
+            <input type="number" name="name" id="name" [(ngModel)]="customer.hoursUsed" (change)="updateCustomers()">
+        </td>
+        <td>
+            {{customer.percentUsed}}%
+        </td>
+        <td>
+            {{customer.note}}
+        </td>
+        <td>
+            {{customer.hoursException}}
+        </td>
+    </tr>
+</table>

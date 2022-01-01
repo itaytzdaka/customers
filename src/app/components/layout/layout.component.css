@@ -1,0 +1,15 @@
+table, th, td {
+    border: 1px solid black;
+    text-align: center;
+}
+
+td, th{
+    padding: 1rem;
+    
+}
+input{
+    height: 100%;
+    width: 100%;
+    text-align: center;
+    border: none;
+}
